@@ -112,6 +112,30 @@
         tap-ms = <30>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        all {
+            bindings = <&kp LC(A)>;
+            key-positions = <14 15>;
+        };
+
+        paste {
+            bindings = <&kp LC(V)>;
+            key-positions = <30 29>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <29 28>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <28 27>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
