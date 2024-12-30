@@ -199,9 +199,13 @@ layers:
 combos:
 - p: [14, 15]
   k: Ctl+A
+  l: [QWERTY, NUMBER, SYMBOL]
 - p: [30, 29]
   k: Ctl+V
+  l: [QWERTY, NUMBER, SYMBOL]
 - p: [29, 28]
   k: Ctl+C
+  l: [QWERTY, SYMBOL, NUMBER]
 - p: [28, 27]
   k: Ctl+X
+  l: [QWERTY, SYMBOL, NUMBER]
