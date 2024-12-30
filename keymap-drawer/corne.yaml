@@ -196,3 +196,12 @@ layers:
   - {t: '$$mdi:backspace$$', type: backspace}
   - $$mdi:backspace-reverse-outline$$
   - KP NUMLOCK
+combos:
+- p: [14, 15]
+  k: Ctl+A
+- p: [30, 29]
+  k: Ctl+V
+- p: [29, 28]
+  k: Ctl+C
+- p: [28, 27]
+  k: Ctl+X
