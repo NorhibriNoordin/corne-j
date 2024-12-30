@@ -41,8 +41,8 @@ layers:
   - {t: /, s: '?'}
   - {t: '-', s: _}
   - $$mdi:keyboard-space$$
-  - LGUI
-  - '&num_caps'
+  - $$mdi:alpha-w-box$$
+  - {t: '&num_caps', s: '$$mdi:alpha-w-box$$'}
   - {t: '$$mdi:keyboard-space$$', h: FN}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: FN}
