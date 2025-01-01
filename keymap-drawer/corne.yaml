@@ -27,7 +27,7 @@ layers:
   - L
   - {t: ;, s: ':'}
   - '&mouse_tog'
-  - _
+  - {t: '$$mdi:apple-keyboard-command$$', h: _}
   - Z
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - {t: C, h: '$$mdi:apple-keyboard-control$$'}
@@ -41,8 +41,8 @@ layers:
   - {t: /, s: '?'}
   - {t: '-', s: _}
   - $$mdi:keyboard-space$$
-  - $$mdi:alpha-w-box$$
-  - {t: '&num_caps', s: '$$mdi:alpha-w-box$$'}
+  - '&kp_menu'
+  - '&caps_tog'
   - {t: '$$mdi:keyboard-space$$', h: FN}
   - $$mdi:arrow-right-bold$$
   - {t: '$$mdi:keyboard-return$$', h: FN}
