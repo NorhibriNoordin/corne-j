@@ -1,9 +1,9 @@
 #include <behaviors/mouse_keys.dtsi>
+#include <dt-bindings/zmk/mouse.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/mouse.h>
 #include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_MOUSE_DEFAULT_MOVE_VAL 1200  // 600
@@ -83,6 +83,29 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
         };
 
+        caps_num: caps_num {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPS_NUM";
+            bindings = <&mo>, <&caps_word>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        caps_tog: caps_tog {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_TOG";
+            #binding-cells = <0>;
+            bindings = <&caps_num 1 0>, <&tog 3>;
+        };
+
+        kp_menu: kp_menu {
+            compatible = "zmk,behavior-tap-dance";
+            label = "KP_MENU";
+            #binding-cells = <0>;
+            bindings = <&mt LGUI C_MENU>, <&kp K_MENU>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -105,10 +128,9 @@
 
     scroll_encoder: scroll_encoder {
         compatible = "zmk,behavior-sensor-rotate";
+        label = "SCROLL_ENCODER";
         #sensor-binding-cells = <0>;
         bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
-
-        tap-ms = <30>;
     };
 
     combos {
@@ -137,6 +159,11 @@
             key-positions = <28 27>;
             layers = <0 2 1>;
         };
+
+        sys_reset {
+            bindings = <&sys_reset>;
+            key-positions = <0 1 12 11>;
+        };
     };
 
     keymap {
@@ -153,11 +180,11 @@
             //                                                      enter
 
             bindings = <
-&esc_tilde      &q_calc  &kp W           &kp E        &kp R             &t_f4          &kp UP_ARROW     &kp Y        &kp U              &kp I            &kp O              &kp P     &slash_equal
-&kp TAB         &kp A    &kp S           &kp D        &kp F             &kp G          &kp DOWN_ARROW   &kp H        &kp J              &kp K            &kp L              &kp SEMI  &mouse_tog
-&kp UNDERSCORE  &kp Z    &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT V  &kp B          &kp LEFT_ARROW   &kp N        &mt RIGHT_SHIFT M  &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &kp FSLH  &kp MINUS
-                         &kp SPACE       &caps_word   &caps_word_2      &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &kp BACKSPACE      &kp DEL
-                                                                                       &kp ENTER
+&esc_tilde               &q_calc  &kp W           &kp E        &kp R             &t_f4          &kp UP_ARROW     &kp Y        &kp U              &kp I            &kp O              &kp P     &slash_equal
+&kp TAB                  &kp A    &kp S           &kp D        &kp F             &kp G          &kp DOWN_ARROW   &kp H        &kp J              &kp K            &kp L              &kp SEMI  &mouse_tog
+&mt UNDERSCORE LEFT_GUI  &kp Z    &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT V  &kp B          &kp LEFT_ARROW   &kp N        &mt RIGHT_SHIFT M  &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &kp FSLH  &kp MINUS
+                                  &kp SPACE       &kp_menu     &caps_tog         &lt 3 SPACE    &kp RIGHT_ARROW  &lt 3 ENTER  &kp BACKSPACE      &kp DEL
+                                                                                                &kp ENTER
             >;
 
             label = "QWERTY";
@@ -209,7 +236,7 @@
         FN {
             display-name = "Fn";
             bindings = <
-&trans  &kp F1  &kp F2           &kp F3       &kp F4              &kp F5     &kp UP          &kp LEFT_PARENTHESIS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH     &kp EQUAL
+&to 0   &kp F1  &kp F2           &kp F3       &kp F4              &kp F5     &kp UP          &kp LEFT_PARENTHESIS   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp SLASH     &kp EQUAL
 &trans  &kp F6  &kp F7           &kp F8       &kp F9              &kp F10    &kp DOWN        &kp RIGHT_PARENTHESIS  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp PLUS
 &trans  &trans  &trans           &bootloader  &mt LEFT_SHIFT F11  &kp F12    &kp LEFT        &kp KP_NUMBER_0        &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp MINUS
                 &rgb_ug RGB_TOG  &trans       &trans              &trans     &kp RIGHT       &kp KP_ENTER           &kp BACKSPACE    &kp DEL
@@ -218,6 +245,18 @@
 
             label = "FN";
             sensor-bindings = <&rgb_encoder>;
+        };
+
+        MISC {
+            bindings = <
+&bt BT_CLR_ALL  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &trans      &trans  &trans  &trans  &trans  &trans  &sys_reset
+&trans          &trans        &trans        &trans        &trans        &trans          &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&bootloader     &trans        &trans        &trans        &trans        &trans          &bt BT_PRV  &trans  &trans  &trans  &trans  &trans  &bootloader
+                              &trans        &trans        &trans        &trans          &bt BT_NXT  &trans  &trans  &trans
+                                                                                        &trans
+            >;
+
+            label = "BT";
         };
     };
 };
