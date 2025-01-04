@@ -76,7 +76,7 @@ layers:
   - (
   - )
   - PG UP
-  - END
+  - _
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -88,7 +88,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - PG DN
+  - {t: '-', s: _}
   - $$mdi:volume-off$$
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
@@ -161,7 +161,7 @@ layers:
   - KP 9
   - {t: /, s: '?'}
   - {t: '=', s: +}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - PgUp
   - F6
   - F7
   - F8
@@ -174,7 +174,7 @@ layers:
   - KP 6
   - '*'
   - +
-  - {t: '$$mdi:transfer$$', type: trans}
+  - PgDn
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - $$mdi:progress-download$$
