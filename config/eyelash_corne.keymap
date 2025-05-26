@@ -112,6 +112,35 @@
         tap-ms = <100>;
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        undo {
+            bindings = <&kp K_UNDO>;
+            key-positions = <28 29>;
+        };
+
+        copy {
+            bindings = <&kp K_COPY>;
+            key-positions = <28 31>;
+        };
+
+        paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <28 32>;
+        };
+
+        cut {
+            bindings = <&kp K_CUT>;
+            key-positions = <28 30>;
+        };
+
+        select-all {
+            bindings = <&kp LC(A)>;
+            key-positions = <28 14>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
