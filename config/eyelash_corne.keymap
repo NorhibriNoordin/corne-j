@@ -116,22 +116,22 @@
         compatible = "zmk,combos";
 
         undo {
-            bindings = <&kp K_UNDO>;
+            bindings = <&kp LC(Z)>;
             key-positions = <28 29>;
         };
 
         copy {
-            bindings = <&kp K_COPY>;
+            bindings = <&kp LC(C)>;
             key-positions = <28 31>;
         };
 
         paste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp LC(V)>;
             key-positions = <28 32>;
         };
 
         cut {
-            bindings = <&kp K_CUT>;
+            bindings = <&kp LC(X)>;
             key-positions = <28 30>;
         };
 
