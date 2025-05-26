@@ -551,25 +551,25 @@ rect.held, rect.combo.held {
 </a></g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="42" y="148" width="28" height="26" class="combo"/>
-<text x="56" y="161" class="combo tap">UNDO</text>
+<text x="56" y="161" class="combo tap">Ctl+Z</text>
 </g>
 <g class="combo combopos-1">
 <path d="M112,150 l-65,8" class="combo"/>
 <path d="M112,150 l65,-8" class="combo"/>
 <rect rx="6" ry="6" x="98" y="137" width="28" height="26" class="combo"/>
-<text x="112" y="150" class="combo tap">COPY</text>
+<text x="112" y="150" class="combo tap">Ctl+C</text>
 </g>
 <g class="combo combopos-2">
 <path d="M140,154 l-93,6" class="combo"/>
 <path d="M140,154 l93,-6" class="combo"/>
 <rect rx="6" ry="6" x="126" y="141" width="28" height="26" class="combo"/>
-<text x="140" y="154" class="combo tap">PASTE</text>
+<text x="140" y="154" class="combo tap">Ctl+V</text>
 </g>
 <g class="combo combopos-3">
 <path d="M84,154 l-37,5" class="combo"/>
 <path d="M84,154 l37,-5" class="combo"/>
 <rect rx="6" ry="6" x="70" y="141" width="28" height="26" class="combo"/>
-<text x="84" y="154" class="combo tap">CUT</text>
+<text x="84" y="154" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="42" y="120" width="28" height="26" class="combo"/>
@@ -840,25 +840,25 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="42" y="148" width="28" height="26" class="combo"/>
-<text x="56" y="161" class="combo tap">UNDO</text>
+<text x="56" y="161" class="combo tap">Ctl+Z</text>
 </g>
 <g class="combo combopos-1">
 <path d="M112,150 l-65,8" class="combo"/>
 <path d="M112,150 l65,-8" class="combo"/>
 <rect rx="6" ry="6" x="98" y="137" width="28" height="26" class="combo"/>
-<text x="112" y="150" class="combo tap">COPY</text>
+<text x="112" y="150" class="combo tap">Ctl+C</text>
 </g>
 <g class="combo combopos-2">
 <path d="M140,154 l-93,6" class="combo"/>
 <path d="M140,154 l93,-6" class="combo"/>
 <rect rx="6" ry="6" x="126" y="141" width="28" height="26" class="combo"/>
-<text x="140" y="154" class="combo tap">PASTE</text>
+<text x="140" y="154" class="combo tap">Ctl+V</text>
 </g>
 <g class="combo combopos-3">
 <path d="M84,154 l-37,5" class="combo"/>
 <path d="M84,154 l37,-5" class="combo"/>
 <rect rx="6" ry="6" x="70" y="141" width="28" height="26" class="combo"/>
-<text x="84" y="154" class="combo tap">CUT</text>
+<text x="84" y="154" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="42" y="120" width="28" height="26" class="combo"/>
@@ -1147,25 +1147,25 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="42" y="148" width="28" height="26" class="combo"/>
-<text x="56" y="161" class="combo tap">UNDO</text>
+<text x="56" y="161" class="combo tap">Ctl+Z</text>
 </g>
 <g class="combo combopos-1">
 <path d="M112,150 l-65,8" class="combo"/>
 <path d="M112,150 l65,-8" class="combo"/>
 <rect rx="6" ry="6" x="98" y="137" width="28" height="26" class="combo"/>
-<text x="112" y="150" class="combo tap">COPY</text>
+<text x="112" y="150" class="combo tap">Ctl+C</text>
 </g>
 <g class="combo combopos-2">
 <path d="M140,154 l-93,6" class="combo"/>
 <path d="M140,154 l93,-6" class="combo"/>
 <rect rx="6" ry="6" x="126" y="141" width="28" height="26" class="combo"/>
-<text x="140" y="154" class="combo tap">PASTE</text>
+<text x="140" y="154" class="combo tap">Ctl+V</text>
 </g>
 <g class="combo combopos-3">
 <path d="M84,154 l-37,5" class="combo"/>
 <path d="M84,154 l37,-5" class="combo"/>
 <rect rx="6" ry="6" x="70" y="141" width="28" height="26" class="combo"/>
-<text x="84" y="154" class="combo tap">CUT</text>
+<text x="84" y="154" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="42" y="120" width="28" height="26" class="combo"/>
@@ -1435,25 +1435,25 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="42" y="148" width="28" height="26" class="combo"/>
-<text x="56" y="161" class="combo tap">UNDO</text>
+<text x="56" y="161" class="combo tap">Ctl+Z</text>
 </g>
 <g class="combo combopos-1">
 <path d="M112,150 l-65,8" class="combo"/>
 <path d="M112,150 l65,-8" class="combo"/>
 <rect rx="6" ry="6" x="98" y="137" width="28" height="26" class="combo"/>
-<text x="112" y="150" class="combo tap">COPY</text>
+<text x="112" y="150" class="combo tap">Ctl+C</text>
 </g>
 <g class="combo combopos-2">
 <path d="M140,154 l-93,6" class="combo"/>
 <path d="M140,154 l93,-6" class="combo"/>
 <rect rx="6" ry="6" x="126" y="141" width="28" height="26" class="combo"/>
-<text x="140" y="154" class="combo tap">PASTE</text>
+<text x="140" y="154" class="combo tap">Ctl+V</text>
 </g>
 <g class="combo combopos-3">
 <path d="M84,154 l-37,5" class="combo"/>
 <path d="M84,154 l37,-5" class="combo"/>
 <rect rx="6" ry="6" x="70" y="141" width="28" height="26" class="combo"/>
-<text x="84" y="154" class="combo tap">CUT</text>
+<text x="84" y="154" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="42" y="120" width="28" height="26" class="combo"/>
@@ -1722,25 +1722,25 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="42" y="148" width="28" height="26" class="combo"/>
-<text x="56" y="161" class="combo tap">UNDO</text>
+<text x="56" y="161" class="combo tap">Ctl+Z</text>
 </g>
 <g class="combo combopos-1">
 <path d="M112,150 l-65,8" class="combo"/>
 <path d="M112,150 l65,-8" class="combo"/>
 <rect rx="6" ry="6" x="98" y="137" width="28" height="26" class="combo"/>
-<text x="112" y="150" class="combo tap">COPY</text>
+<text x="112" y="150" class="combo tap">Ctl+C</text>
 </g>
 <g class="combo combopos-2">
 <path d="M140,154 l-93,6" class="combo"/>
 <path d="M140,154 l93,-6" class="combo"/>
 <rect rx="6" ry="6" x="126" y="141" width="28" height="26" class="combo"/>
-<text x="140" y="154" class="combo tap">PASTE</text>
+<text x="140" y="154" class="combo tap">Ctl+V</text>
 </g>
 <g class="combo combopos-3">
 <path d="M84,154 l-37,5" class="combo"/>
 <path d="M84,154 l37,-5" class="combo"/>
 <rect rx="6" ry="6" x="70" y="141" width="28" height="26" class="combo"/>
-<text x="84" y="154" class="combo tap">CUT</text>
+<text x="84" y="154" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="42" y="120" width="28" height="26" class="combo"/>
@@ -2006,25 +2006,25 @@ rect.held, rect.combo.held {
 </g>
 <g class="combo combopos-0">
 <rect rx="6" ry="6" x="42" y="148" width="28" height="26" class="combo"/>
-<text x="56" y="161" class="combo tap">UNDO</text>
+<text x="56" y="161" class="combo tap">Ctl+Z</text>
 </g>
 <g class="combo combopos-1">
 <path d="M112,150 l-65,8" class="combo"/>
 <path d="M112,150 l65,-8" class="combo"/>
 <rect rx="6" ry="6" x="98" y="137" width="28" height="26" class="combo"/>
-<text x="112" y="150" class="combo tap">COPY</text>
+<text x="112" y="150" class="combo tap">Ctl+C</text>
 </g>
 <g class="combo combopos-2">
 <path d="M140,154 l-93,6" class="combo"/>
 <path d="M140,154 l93,-6" class="combo"/>
 <rect rx="6" ry="6" x="126" y="141" width="28" height="26" class="combo"/>
-<text x="140" y="154" class="combo tap">PASTE</text>
+<text x="140" y="154" class="combo tap">Ctl+V</text>
 </g>
 <g class="combo combopos-3">
 <path d="M84,154 l-37,5" class="combo"/>
 <path d="M84,154 l37,-5" class="combo"/>
 <rect rx="6" ry="6" x="70" y="141" width="28" height="26" class="combo"/>
-<text x="84" y="154" class="combo tap">CUT</text>
+<text x="84" y="154" class="combo tap">Ctl+X</text>
 </g>
 <g class="combo combopos-4">
 <rect rx="6" ry="6" x="42" y="120" width="28" height="26" class="combo"/>
