@@ -294,3 +294,14 @@ layers:
   - {t: '$$mdi:keyboard-return$$', h: FN}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:transfer$$', type: trans}
+combos:
+- p: [28, 29]
+  k: UNDO
+- p: [28, 31]
+  k: COPY
+- p: [28, 32]
+  k: PASTE
+- p: [28, 30]
+  k: CUT
+- p: [28, 14]
+  k: Ctl+A
