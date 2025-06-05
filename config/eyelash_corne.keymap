@@ -59,7 +59,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "MOUSE_TOG";
             #binding-cells = <0>;
-            bindings = <&kp SQT>, <&tog 3>;
+            bindings = <&kp SQT>, <&none>, <&tog 3>;
         };
 
         caps_num: caps_num {
@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS_TOG";
             #binding-cells = <0>;
-            bindings = <&caps_num 1 0>, <&tog 2>;
+            bindings = <&caps_num 1 0>, <&kp CAPSLOCK>, <&tog 2>;
         };
 
         kp_menu: kp_menu {
@@ -178,10 +178,10 @@
             //                                                      enter
 
             bindings = <
-&esc_tilde      &kp Q  &kp W           &kp E        &kp R             &t_f4                                           &kp UP_ARROW                      &kp Y        &kp U             &kp I            &kp O                &kp P          &slash_alt
-&kp TAB         &kp A  &kp S           &kp D        &kp F             &kp G                           &kp DOWN_ARROW  &rgb_ug RGB_TOG  &kp RIGHT_ARROW  &kp H        &kp J             &kp K            &kp L                &kp SEMICOLON  &mouse_tog
-&kp UNDERSCORE  &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT V  &kp B        &rgb_ug RGB_TOG                    &kp DOWN_ARROW                    &kp N        &mt LEFT_SHIFT M  &mt RCTRL COMMA  &mt LEFT_ALT PERIOD  &kp SLASH      &kp MINUS
-                                       &kp_menu     &caps_tog         &lt 2 SPACE                                                                       &lt 2 ENTER  &kp BACKSPACE     &lt 4 DELETE
+&esc_tilde      &kp Q  &kp W           &kp E        &kp R             &t_f4                                            &kp UP_ARROW                      &kp Y        &kp U             &kp I            &kp O                &kp P          &slash_alt
+&kp TAB         &kp A  &kp S           &kp D        &kp F             &kp G                            &kp DOWN_ARROW  &rgb_ug RGB_TOG  &kp RIGHT_ARROW  &kp H        &kp J             &kp K            &kp L                &kp SEMICOLON  &mouse_tog
+&kp UNDERSCORE  &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT V  &kp B        &kp K_PLAY_PAUSE                    &kp DOWN_ARROW                    &kp N        &mt LEFT_SHIFT M  &mt RCTRL COMMA  &mt LEFT_ALT PERIOD  &kp SLASH      &kp MINUS
+                                       &kp_menu     &caps_tog         &lt 2 SPACE                                                                        &lt 2 ENTER  &kp BACKSPACE     &lt 4 DELETE
             >;
 
             label = "QWERTY";
@@ -200,7 +200,7 @@
             bindings = <
 &kp GRAVE  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5                                     &mmv MOVE_UP                     &kp N6      &kp N7    &kp N8    &kp N9                &kp N0    &kp EQUAL
 &kp HOME   &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET   &kp AMPS  &kp STAR  &kp LEFT_PARENTHESIS  &kp RPAR  &kp PAGE_UP
-&trans     &trans           &trans       &trans    &kp LBRC    &kp LBKT     &kp K_MUTE                    &mmv MOVE_DOWN                   &kp RBKT    &kp RBRC  &trans    &trans                &trans    &trans
+&trans     &trans           &trans       &trans    &kp LBRC    &kp LBKT     &kp K_MUTE                    &mmv MOVE_DOWN                   &kp RBKT    &kp RBRC  &trans    &trans                &trans    &kp PAGE_DOWN
                                          &trans    &trans      &trans                                                                      &kp INSERT  &trans    &trans
             >;
 
@@ -211,10 +211,10 @@
         FN {
             display-name = "Fn";
             bindings = <
-&to 0          &kp F1  &kp F2  &kp F3  &kp F4              &kp F5                                           &kp UP                           &kp LPAR      &kp KP_NUMBER_7        &kp KP_NUMBER_8  &kp KP_NUMBER_9      &kp RPAR   &kp EQUAL
-&kp PAGE_UP    &kp F6  &kp F7  &kp F8  &kp F9              &kp F10                          &kp LEFT_ARROW  &trans          &kp RIGHT_ARROW  &kp PLUS      &kp KP_N4              &kp KP_N5        &kp KP_N6            &kp MINUS  &kp COMMA
-&kp PAGE_DOWN  &trans  &trans  &trans  &mt LEFT_SHIFT F11  &kp F12       &kp KP_NUMBER_1                    &kp DOWN_ARROW                   &kp STAR      &mt RIGHT_SHIFT KP_N1  &mt RCTRL KP_N2  &mt RIGHT_ALT KP_N3  &kp SLASH  &kp PERIOD
-                               &trans  &kp RIGHT           &kp KP_ENTER                                                                      &kp KP_ENTER  &kp DEL                &kp KP_NUMLOCK
+&to 0          &kp F1  &kp F2  &kp F3  &kp F4              &kp F5                                  &kp UP                           &kp LPAR      &kp KP_NUMBER_7        &kp KP_NUMBER_8  &kp KP_NUMBER_9      &kp RPAR   &kp EQUAL
+&kp PAGE_UP    &kp F6  &kp F7  &kp F8  &kp F9              &kp F10                 &kp LEFT_ARROW  &trans          &kp RIGHT_ARROW  &kp PLUS      &kp KP_N4              &kp KP_N5        &kp KP_N6            &kp MINUS  &kp COMMA
+&kp PAGE_DOWN  &trans  &trans  &trans  &mt LEFT_SHIFT F11  &kp F12       &trans                    &kp DOWN_ARROW                   &kp STAR      &mt RIGHT_SHIFT KP_N1  &mt RCTRL KP_N2  &mt RIGHT_ALT KP_N3  &kp SLASH  &kp PERIOD
+                               &trans  &kp RIGHT           &kp KP_ENTER                                                             &kp KP_ENTER  &kp DEL                &kp KP_NUMLOCK
             >;
 
             label = "FN";
