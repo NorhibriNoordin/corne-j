@@ -359,3 +359,6 @@ combos:
 - p: [28, 14]
   k: Ctl+A
   l: [QWERTY, NUMBER, MOUSE, COLEMAK]
+- p: [5, 4, 7, 8]
+  k: '&work_email'
+  l: [FN]

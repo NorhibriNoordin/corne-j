@@ -1143,6 +1143,14 @@ rect.held, rect.combo.held {
 <tspan x="0" dy="-0.6em" style="font-size: 86%">KP</tspan><tspan x="0" dy="1.2em" style="font-size: 86%">NUMLOCK</tspan>
 </text>
 </g>
+<g class="combo combopos-0">
+<path d="M490,38 l-163,3" class="combo"/>
+<path d="M490,38 l-219,-3" class="combo"/>
+<path d="M490,38 l163,3" class="combo"/>
+<path d="M490,38 l219,-3" class="combo"/>
+<rect rx="6" ry="6" x="476" y="25" width="28" height="26" class="combo"/>
+<text x="490" y="38" class="combo tap"><tspan style="font-size: 60%">&amp;work_ema…</tspan></text>
+</g>
 </g>
 </g>
 <g transform="translate(40, 955)" class="layer-MOUSE">
