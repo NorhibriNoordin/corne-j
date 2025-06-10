@@ -255,10 +255,10 @@
 
         numpad {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                    &trans          &trans           &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans  &trans
-&trans  &trans     &trans     &trans     &trans     &trans            &trans  &trans  &trans  &trans           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &trans  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &trans            &trans          &kp KP_NUMBER_1  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &trans  &trans
-                              &trans     &trans     &trans                                    &kp KP_ENTER     &trans           &trans
+&trans  &trans     &trans     &trans     &trans     &trans                         &kp UP_ARROW             &kp KP_LEFT_PARENTHESIS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_RIGHT_PARENTHESIS  &kp KP_EQUAL
+&trans  &trans     &trans     &trans     &trans     &trans               &kp LEFT  &kp MINUS     &kp RIGHT  &kp KP_NUMBER_0          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY           &kp KP_PLUS
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &trans              &kp DOWN                 &kp KP_NUMBER_1          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE             &kp KP_SUBTRACT
+                              &trans     &trans     &kp SPACE                                               &kp KP_ENTER             &kp BACKSPACE    &kp PERIOD
             >;
 
             label = "NUMPAD";
