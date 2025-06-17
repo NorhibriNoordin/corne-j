@@ -607,7 +607,9 @@ rect.held, rect.combo.held {
 <path d="M490,217 l123,6" class="combo"/>
 <path d="M490,217 l186,-7" class="combo"/>
 <rect rx="6" ry="6" x="476" y="204" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="481" y="208" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
+<a href="#QWERTY">
+<text x="490" y="217" class="combo tap layer-activator">QWERTY</text>
+</a><text x="490" y="228" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-10">
 <path d="M896,98 l-42,37" class="combo"/>
@@ -936,7 +938,9 @@ rect.held, rect.combo.held {
 <path d="M490,217 l123,6" class="combo"/>
 <path d="M490,217 l186,-7" class="combo"/>
 <rect rx="6" ry="6" x="476" y="204" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="481" y="208" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
+<a href="#QWERTY">
+<text x="490" y="217" class="combo tap layer-activator">QWERTY</text>
+</a><text x="490" y="228" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-10">
 <path d="M896,98 l-42,37" class="combo"/>
@@ -1244,7 +1248,9 @@ rect.held, rect.combo.held {
 <path d="M490,217 l123,6" class="combo"/>
 <path d="M490,217 l186,-7" class="combo"/>
 <rect rx="6" ry="6" x="476" y="204" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="481" y="208" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
+<a href="#QWERTY">
+<text x="490" y="217" class="combo tap layer-activator">QWERTY</text>
+</a><text x="490" y="228" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-3">
 <path d="M896,98 l-42,37" class="combo"/>
@@ -1552,7 +1558,9 @@ rect.held, rect.combo.held {
 <path d="M490,217 l123,6" class="combo"/>
 <path d="M490,217 l186,-7" class="combo"/>
 <rect rx="6" ry="6" x="476" y="204" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="481" y="208" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
+<a href="#QWERTY">
+<text x="490" y="217" class="combo tap layer-activator">QWERTY</text>
+</a><text x="490" y="228" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-7">
 <path d="M896,98 l-42,37" class="combo"/>
@@ -1834,7 +1842,9 @@ rect.held, rect.combo.held {
 <path d="M490,217 l123,6" class="combo"/>
 <path d="M490,217 l186,-7" class="combo"/>
 <rect rx="6" ry="6" x="476" y="204" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="481" y="208" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
+<a href="#QWERTY">
+<text x="490" y="217" class="combo tap layer-activator">QWERTY</text>
+</a><text x="490" y="228" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-2">
 <path d="M896,98 l-42,37" class="combo"/>
@@ -2142,7 +2152,9 @@ rect.held, rect.combo.held {
 <path d="M490,217 l123,6" class="combo"/>
 <path d="M490,217 l186,-7" class="combo"/>
 <rect rx="6" ry="6" x="476" y="204" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="481" y="208" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
+<a href="#QWERTY">
+<text x="490" y="217" class="combo tap layer-activator">QWERTY</text>
+</a><text x="490" y="228" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-2">
 <path d="M896,98 l-42,37" class="combo"/>
@@ -2463,7 +2475,9 @@ rect.held, rect.combo.held {
 <path d="M490,217 l123,6" class="combo"/>
 <path d="M490,217 l186,-7" class="combo"/>
 <rect rx="6" ry="6" x="476" y="204" width="28" height="26" class="combo"/>
-<use href="#mdi:keyboard-esc" xlink:href="#mdi:keyboard-esc" x="481" y="208" height="18" width="18.0" class="combo tap glyph mdi:keyboard-esc"/>
+<a href="#QWERTY">
+<text x="490" y="217" class="combo tap layer-activator">QWERTY</text>
+</a><text x="490" y="228" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-10">
 <path d="M896,98 l-42,37" class="combo"/>

@@ -374,6 +374,6 @@ combos:
 - p: [18, 22]
   k: {t: '-', s: _}
 - p: [44, 43, 45, 46]
-  k: $$mdi:keyboard-esc$$
+  k: {t: QWERTY, h: toggle}
 - p: [39, 12]
   k: +
