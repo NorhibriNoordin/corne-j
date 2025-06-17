@@ -201,8 +201,8 @@
             key-positions = <18 22>;
         };
 
-        esc_combo {
-            bindings = <&kp ESCAPE>;
+        layer_defaultt {
+            bindings = <&to 0>;
             key-positions = <44 43 45 46>;
         };
 
