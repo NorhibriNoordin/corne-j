@@ -103,6 +103,15 @@
             mods = <(MOD_LALT|MOD_RALT)>;
         };
 
+        escTilde_btm: escTilde_btm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ESCTILDE_BTM";
+            bindings = <&kp>, <&esc_tilde>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -159,7 +168,7 @@
 
         select-all {
             bindings = <&kp LC(A)>;
-            key-positions = <28 14>;
+            key-positions = <14 13>;
             layers = <0 1 3 6>;
         };
 
@@ -167,6 +176,39 @@
             bindings = <&work_email>;
             key-positions = <5 4 7 8>;
             layers = <2>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <44 43>;
+            layers = <0 1 6>;
+        };
+
+        del_combo {
+            bindings = <&kp DELETE>;
+            key-positions = <45 46>;
+            layers = <0 1 6>;
+        };
+
+        underscore_combo {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <33 36>;
+            layers = <0 1 6>;
+        };
+
+        dash-combo {
+            bindings = <&kp MINUS>;
+            key-positions = <18 22>;
+        };
+
+        esc_combo {
+            bindings = <&kp ESCAPE>;
+            key-positions = <44 43 45 46>;
+        };
+
+        plus_combo {
+            bindings = <&kp PLUS>;
+            key-positions = <39 12>;
         };
     };
 
@@ -193,10 +235,10 @@
             //                                                      enter
 
             bindings = <
-&esc_tilde      &kp Q  &kp W           &kp E        &kp R             &t_f4                                            &kp UP_ARROW                      &kp Y        &kp U             &kp I            &kp O                &kp P          &slash_alt
-&kp TAB         &kp A  &kp S           &kp D        &kp F             &kp G                            &kp DOWN_ARROW  &rgb_ug RGB_TOG  &kp RIGHT_ARROW  &kp H        &kp J             &kp K            &kp L                &kp SEMICOLON  &mouse_tog
-&kp UNDERSCORE  &kp Z  &mt LEFT_ALT X  &mt LCTRL C  &mt LEFT_SHIFT V  &kp B        &kp K_PLAY_PAUSE                    &kp DOWN_ARROW                    &kp N        &mt LEFT_SHIFT M  &mt RCTRL COMMA  &mt LEFT_ALT PERIOD  &kp SLASH      &kp MINUS
-                                       &kp_menu     &caps_tog         &lt 2 SPACE                                                                        &lt 2 ENTER  &kp BACKSPACE     &lt 4 DELETE
+&esc_tilde      &kp Q  &kp W           &kp E                     &kp R             &t_f4                                            &kp UP_ARROW                      &kp Y        &kp U             &kp I            &kp O                 &kp P          &slash_alt
+&kp TAB         &kp A  &kp S           &kp D                     &kp F             &kp G                            &kp DOWN_ARROW  &rgb_ug RGB_TOG  &kp RIGHT_ARROW  &kp H        &kp J             &kp K            &kp L                 &kp SEMICOLON  &mouse_tog
+&kp UNDERSCORE  &kp Z  &mt LEFT_ALT X  &mt LCTRL C               &mt LEFT_SHIFT V  &kp B        &kp K_PLAY_PAUSE                    &kp DOWN_ARROW                    &kp N        &mt LEFT_SHIFT M  &mt RCTRL COMMA  &mt RIGHT_ALT PERIOD  &kp SLASH      &kp MINUS
+                                       &escTilde_btm LEFT_GUI 0  &caps_tog         &lt 2 SPACE                                                                        &lt 2 ENTER  &kp BACKSPACE     &lt 4 DELETE
             >;
 
             label = "QWERTY";
@@ -213,10 +255,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp N1           &kp N2       &kp N3    &kp N4      &kp N5                                     &mmv MOVE_UP                     &kp N6      &kp N7    &kp N8    &kp N9                &kp N0    &kp EQUAL
-&kp HOME   &kp EXCLAMATION  &kp AT_SIGN  &kp HASH  &kp DOLLAR  &kp PERCENT                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET   &kp AMPS  &kp STAR  &kp LEFT_PARENTHESIS  &kp RPAR  &kp PAGE_UP
-&trans     &trans           &trans       &trans    &kp LBRC    &kp LBKT     &kp K_MUTE                    &mmv MOVE_DOWN                   &kp RBKT    &kp RBRC  &trans    &trans                &trans    &kp PAGE_DOWN
-                                         &trans    &trans      &trans                                                                      &kp INSERT  &trans    &trans
+&kp GRAVE  &kp N1           &kp N2       &kp N3                &kp N4                     &kp N5                                     &mmv MOVE_UP                     &kp N6      &kp N7                       &kp N8           &kp N9                &kp N0    &kp EQUAL
+&kp HOME   &kp EXCLAMATION  &kp AT_SIGN  &kp HASH              &kp DOLLAR                 &kp PERCENT                &mmv MOVE_LEFT  &mkp LCLK       &mmv MOVE_RIGHT  &kp CARET   &kp AMPS                     &kp STAR         &kp LEFT_PARENTHESIS  &kp RPAR  &kp PAGE_UP
+&trans     &trans           &trans       &mt LCTRL UNDERSCORE  &mt LEFT_SHIFT LEFT_BRACE  &kp LBKT     &kp K_MUTE                    &mmv MOVE_DOWN                   &kp RBKT    &mt RIGHT_SHIFT RIGHT_BRACE  &mt RCTRL MINUS  &trans                &trans    &kp PAGE_DOWN
+                                         &trans                &trans                     &trans                                                                      &kp INSERT  &trans                       &trans
             >;
 
             label = "NUMBER";
@@ -246,10 +288,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans      &trans     &trans      &trans           &mkp MB5                                &mmv MOVE_UP                     &mkp MB5   &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans     &trans      &trans           &mkp MB4                &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &mkp MB4   &trans  &trans  &trans  &trans  &to 0
-&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE      &trans     &mkp RCLK                    &mmv MOVE_DOWN                   &trans     &trans  &trans  &trans  &trans  &kp SCROLLLOCK
-                               &kp SPACE   &mmv MOVE_RIGHT  &kp SPACE                                                                &kp ENTER  &trans  &trans
+&trans  &trans      &trans     &trans      &trans       &mkp MB5                                &mmv MOVE_UP                     &mkp MB5   &trans  &trans  &trans  &trans  &trans
+&trans  &trans      &trans     &trans      &trans       &mkp MB4                &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &mkp MB4   &trans  &trans  &trans  &trans  &to 0
+&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans     &mkp RCLK                    &mmv MOVE_DOWN                   &trans     &trans  &trans  &trans  &trans  &kp SCROLLLOCK
+                               &kp SPACE   &trans       &kp SPACE                                                                &kp ENTER  &trans  &trans
             >;
 
             label = "MOUSE";
@@ -270,10 +312,10 @@
 
         numpad {
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &trans                         &kp UP_ARROW             &kp KP_LEFT_PARENTHESIS  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_RIGHT_PARENTHESIS  &kp KP_EQUAL
-&trans  &trans     &trans     &trans     &trans     &trans               &kp LEFT  &kp MINUS     &kp RIGHT  &kp KP_NUMBER_0          &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MULTIPLY           &kp KP_PLUS
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &trans              &kp DOWN                 &kp KP_NUMBER_1          &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_DIVIDE             &kp KP_SUBTRACT
-                              &trans     &trans     &kp SPACE                                               &kp KP_ENTER             &kp BACKSPACE    &kp PERIOD
+&trans  &trans     &trans     &trans     &trans     &trans                         &kp UP_ARROW             &kp KP_LEFT_PARENTHESIS  &kp KP_NUMBER_7              &kp KP_NUMBER_8        &kp KP_NUMBER_9            &kp KP_RIGHT_PARENTHESIS  &kp KP_EQUAL
+&trans  &trans     &trans     &trans     &trans     &trans               &kp LEFT  &kp MINUS     &kp RIGHT  &kp KP_NUMBER_0          &kp KP_NUMBER_4              &kp KP_NUMBER_5        &kp KP_NUMBER_6            &kp KP_MULTIPLY           &kp KP_PLUS
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &trans              &kp DOWN                 &kp KP_NUMBER_1          &mt RIGHT_SHIFT KP_NUMBER_1  &mt RCTRL KP_NUMBER_2  &mt RIGHT_ALT KP_NUMBER_3  &kp KP_DIVIDE             &kp KP_SUBTRACT
+                              &trans     &trans     &kp SPACE                                               &kp KP_ENTER             &kp BACKSPACE                &kp PERIOD
             >;
 
             label = "NUMPAD";
@@ -282,10 +324,10 @@
 
         colemak_dh {
             bindings = <
-&esc_tilde      &kp Q  &kp W  &kp F     &kp P      &kp B                         &trans          &kp J        &kp L          &kp U      &kp Y    &kp SEMI  &slash_equal
-&kp TAB         &kp A  &kp R  &kp S     &kp T      &kp G                 &trans  &trans  &trans  &kp M        &kp N          &kp E      &kp I    &kp O     &mouse_tog
-&kp UNDERSCORE  &kp Z  &kp X  &kp C     &kp D      &kp V        &to 0            &trans          &kp K        &kp H          &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
-                              &kp_menu  &caps_tog  &lt 2 SPACE                                   &lt 2 ENTER  &kp BACKSPACE  &trans
+&esc_tilde      &kp Q  &kp W  &kp F                     &kp P      &kp B                         &trans          &kp J        &kp L          &kp U      &kp Y    &kp SEMI  &slash_equal
+&kp TAB         &kp A  &kp R  &kp S                     &kp T      &kp G                 &trans  &trans  &trans  &kp M        &kp N          &kp E      &kp I    &kp O     &mouse_tog
+&kp UNDERSCORE  &kp Z  &kp X  &kp C                     &kp D      &kp V        &to 0            &trans          &kp K        &kp H          &kp COMMA  &kp DOT  &kp FSLH  &kp MINUS
+                              &escTilde_btm LEFT_GUI 0  &caps_tog  &lt 2 SPACE                                   &lt 2 ENTER  &kp BACKSPACE  &trans
             >;
 
             label = "COLEMAK";
