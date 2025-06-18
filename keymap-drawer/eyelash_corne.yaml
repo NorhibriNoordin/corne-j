@@ -20,7 +20,7 @@ layers:
   - D
   - F
   - G
-  - $$mdi:arrow-down-bold$$
+  - $$mdi:arrow-left-bold$$
   - RGB TOG
   - $$mdi:arrow-right-bold$$
   - H
@@ -92,7 +92,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - PgDn
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '`', s: '~'}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - Ins
@@ -301,7 +301,7 @@ layers:
   - F
   - P
   - B
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:arrow-up-bold$$
   - J
   - L
   - U
@@ -314,9 +314,9 @@ layers:
   - S
   - T
   - G
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:arrow-left-bold$$
+  - RGB TOG
+  - $$mdi:arrow-right-bold$$
   - M
   - N
   - E
@@ -325,16 +325,16 @@ layers:
   - '&mouse_tog'
   - _
   - Z
-  - X
-  - C
-  - D
+  - {t: X, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: C, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
   - V
   - {t: QWERTY, h: toggle}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - $$mdi:arrow-down-bold$$
   - K
-  - H
-  - {t: ',', s: <}
-  - {t: ., s: '>'}
+  - {t: H, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: ',', h: '$$mdi:apple-keyboard-control$$', s: <}
+  - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
   - {t: /, s: '?'}
   - {t: '-', s: _}
   - {t: '$$mdi:keyboard-esc$$', h: '$$mdi:apple-keyboard-command$$', s: '~'}
@@ -376,4 +376,8 @@ combos:
 - p: [44, 43, 45, 46]
   k: {t: QWERTY, h: toggle}
 - p: [39, 12]
+  k: +
+- p: [43, 42]
+  k: {t: '`', s: '~'}
+- p: [23, 25]
   k: +
