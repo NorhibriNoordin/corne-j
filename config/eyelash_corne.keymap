@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS_TOG";
             #binding-cells = <0>;
-            bindings = <&caps_num 1 0>, <&kp CAPSLOCK>, <&tog 2>;
+            bindings = <&caps_num 1 0>, <&tog 2>, <&kp CAPSLOCK>;
         };
 
         kp_menu: kp_menu {
@@ -172,12 +172,6 @@
             layers = <0 1 3 6>;
         };
 
-        work_email {
-            bindings = <&work_email>;
-            key-positions = <5 4 7 8>;
-            layers = <2>;
-        };
-
         tab {
             bindings = <&kp TAB>;
             key-positions = <44 43>;
@@ -219,15 +213,6 @@
         plus_alt {
             bindings = <&kp PLUS>;
             key-positions = <23 25>;
-        };
-    };
-
-    macros {
-        work_email: work_email {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp M &kp U &kp H &kp D &kp N &kp O &kp R &kp H &kp I &kp B &kp R &kp I &kp AT &kp D &kp O &kp C &kp T &kp O &kp R &kp N2 &kp U &kp DOT &kp M &kp Y>;
-            label = "WORK_EMAIL";
         };
     };
 
