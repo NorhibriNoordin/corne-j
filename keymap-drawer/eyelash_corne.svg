@@ -1251,21 +1251,13 @@ rect.held, rect.combo.held {
 </text>
 </g>
 <g class="combo combopos-0">
-<path d="M490,38 l-163,3" class="combo"/>
-<path d="M490,38 l-219,-3" class="combo"/>
-<path d="M490,38 l163,3" class="combo"/>
-<path d="M490,38 l219,-3" class="combo"/>
-<rect rx="6" ry="6" x="476" y="25" width="28" height="26" class="combo"/>
-<text x="490" y="38" class="combo tap"><tspan style="font-size: 60%">&amp;work_ema…</tspan></text>
-</g>
-<g class="combo combopos-1">
 <path d="M490,97 l-163,0" class="combo"/>
 <path d="M490,97 l163,0" class="combo"/>
 <rect rx="6" ry="6" x="476" y="84" width="28" height="26" class="combo"/>
 <text x="490" y="97" class="combo tap">-</text>
 <text x="490" y="86" class="combo shifted">_</text>
 </g>
-<g class="combo combopos-2">
+<g class="combo combopos-1">
 <path d="M490,217 l-123,7" class="combo"/>
 <path d="M490,217 l-186,-7" class="combo"/>
 <path d="M490,217 l123,6" class="combo"/>
@@ -1275,18 +1267,18 @@ rect.held, rect.combo.held {
 <text x="490" y="217" class="combo tap layer-activator">QWERTY</text>
 </a><text x="490" y="228" class="combo hold">toggle</text>
 </g>
-<g class="combo combopos-3">
+<g class="combo combopos-2">
 <path d="M896,98 l-42,37" class="combo"/>
 <path d="M896,98 l42,-37" class="combo"/>
 <rect rx="6" ry="6" x="882" y="85" width="28" height="26" class="combo"/>
 <text x="896" y="98" class="combo tap">+</text>
 </g>
-<g class="combo combopos-4">
+<g class="combo combopos-3">
 <rect rx="6" ry="6" x="241" y="193" width="28" height="26" class="combo"/>
 <text x="255" y="206" class="combo tap">`</text>
 <text x="255" y="195" class="combo shifted">~</text>
 </g>
-<g class="combo combopos-5">
+<g class="combo combopos-4">
 <path d="M784,91 l-37,0" class="combo"/>
 <path d="M784,91 l37,0" class="combo"/>
 <rect rx="6" ry="6" x="770" y="78" width="28" height="26" class="combo"/>

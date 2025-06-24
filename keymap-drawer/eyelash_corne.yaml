@@ -359,9 +359,6 @@ combos:
 - p: [14, 13]
   k: Ctl+A
   l: [QWERTY, NUMBER, MOUSE, COLEMAK]
-- p: [5, 4, 7, 8]
-  k: '&work_email'
-  l: [FN]
 - p: [44, 43]
   k: $$mdi:keyboard-tab$$
   l: [QWERTY, NUMBER, COLEMAK]
