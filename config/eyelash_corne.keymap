@@ -75,7 +75,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS_TOG";
             #binding-cells = <0>;
-            bindings = <&caps_num 1 0>, <&tog 2>, <&kp CAPSLOCK>;
+            bindings = <&caps_num 1 0>, <&tog 2>;
         };
 
         kp_menu: kp_menu {
