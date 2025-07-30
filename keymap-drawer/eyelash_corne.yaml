@@ -142,7 +142,7 @@ layers:
   - {t: /, s: '?'}
   - .
   - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:arrow-right-bold$$
+  - {t: QWERTY, h: toggle}
   - {t: KP ENTER, type: held}
   - {t: KP ENTER, type: held alternate}
   - $$mdi:backspace-reverse-outline$$
