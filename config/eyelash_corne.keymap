@@ -283,10 +283,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans      &trans     &trans      &trans       &mkp MB5                                &mmv MOVE_UP                     &mkp MB5   &trans  &trans  &trans  &trans  &trans
-&trans  &trans      &trans     &trans      &trans       &mkp MB4                &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &mkp MB4   &trans  &trans  &trans  &trans  &to 0
-&trans  &kp K_UNDO  &kp K_CUT  &kp K_COPY  &kp K_PASTE  &trans     &mkp RCLK                    &mmv MOVE_DOWN                   &trans     &trans  &trans  &trans  &trans  &kp SCROLLLOCK
-                               &kp SPACE   &trans       &kp SPACE                                                                &kp ENTER  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &mkp MB5                                &mmv MOVE_UP                     &mkp MB5   &trans  &trans  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &mkp MB4                &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &mkp MB4   &trans  &trans  &trans  &trans  &to 0
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &mkp RCLK                    &mmv MOVE_DOWN                   &trans     &trans  &trans  &trans  &trans  &kp SCROLLLOCK
+                              &kp SPACE  &trans     &kp SPACE                                                                &kp ENTER  &trans  &trans
             >;
 
             label = "MOUSE";
