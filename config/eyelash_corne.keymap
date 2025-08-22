@@ -112,6 +112,77 @@
             tapping-term-ms = <200>;
         };
 
+        mouse_v: mouse_v {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_V";
+            bindings = <&kp LC(V)>, <&mt LEFT_SHIFT V>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_RCTL|MOD_LGUI|MOD_LALT)>;
+        };
+
+        mouse_c: mouse_c {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_C";
+            bindings = <&kp LC(C)>, <&kp C>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI|MOD_LSFT|MOD_LALT|MOD_LGUI)>;
+        };
+
+        mouse_x: mouse_x {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_X";
+            bindings = <&kp LC(X)>, <&mt LEFT_ALT X>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LCTL|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        mouse_z: mouse_z {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_Z";
+            bindings = <&kp LC(Z)>, <&kp Z>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RGUI|MOD_RSFT|MOD_RCTL|MOD_RALT|MOD_LGUI|MOD_LALT|MOD_LSFT|MOD_LCTL)>;
+        };
+
+        mouse_b5l: mouse_b5l {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MOUSE_B5L";
+            #binding-cells = <0>;
+            bindings = <&kp Y>, <&mkp MB5>;
+        };
+
+        mouse_b4l: mouse_b4l {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MOUSE_B4L";
+            #binding-cells = <0>;
+            bindings = <&kp H>, <&mkp MB4>;
+        };
+
+        mouse_b5r: mouse_b5r {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MOUSE_B5R";
+            #binding-cells = <0>;
+            bindings = <&kp T>, <&mkp MB5>;
+        };
+
+        mouse_b4r: mouse_b4r {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MOUSE_B4R";
+            #binding-cells = <0>;
+            bindings = <&kp G>, <&mkp MB4>;
+        };
+
+        esc_mouse: esc_mouse {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ESC_MOUSE";
+            #binding-cells = <0>;
+            bindings = <&esc_tilde>, <&esc_tilde>, <&to 0>;
+        };
+
         mmv {
             acceleration-exponent = <1>;      // 1
             time-to-max-speed-ms = <900>;    // 40
@@ -283,10 +354,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans  &trans     &trans     &trans     &trans     &mkp MB5                                &mmv MOVE_UP                     &mkp MB5   &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans     &trans     &mkp MB4                &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &mkp MB4   &trans  &trans  &trans  &trans  &to 0
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans     &mkp RCLK                    &mmv MOVE_DOWN                   &trans     &trans  &trans  &trans  &trans  &trans
-                              &trans     &trans     &kp SPACE                                                                &kp ENTER  &trans  &trans
+&esc_mouse  &trans       &trans     &trans     &trans     &mouse_b5r                               &mmv MOVE_UP                     &mouse_b5l  &trans  &trans  &trans  &trans  &trans
+&trans      &mt LC(A) A  &trans     &trans     &trans     &mouse_b4r               &mmv MOVE_LEFT  &mkp MB1        &mmv MOVE_RIGHT  &mouse_b4l  &trans  &trans  &trans  &trans  &to 0
+&trans      &kp LC(Z)    &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans      &mkp RCLK                    &mmv MOVE_DOWN                   &trans      &trans  &trans  &trans  &trans  &trans
+                                    &trans     &trans     &trans                                                                    &trans      &trans  &trans
             >;
 
             label = "MOUSE";
