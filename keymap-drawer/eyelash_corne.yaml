@@ -45,8 +45,8 @@ layers:
   - {t: '-', s: _}
   - {t: '$$mdi:keyboard-esc$$', h: LGUI, s: '~'}
   - '&caps_tog'
-  - {t: '$$mdi:keyboard-space$$', h: SYMBOL}
-  - {t: '$$mdi:keyboard-return$$', h: SYMBOL}
+  - {t: '$$mdi:keyboard-space$$', h: FN}
+  - {t: '$$mdi:keyboard-return$$', h: FN}
   - {t: '$$mdi:backspace$$', type: backspace}
   - {t: '$$mdi:backspace-reverse-outline$$', h: '4'}
   NUMBER:
@@ -98,55 +98,55 @@ layers:
   - INS
   - $$mdi:backspace-reverse-outline$$
   - {t: '$$mdi:transfer$$', type: trans}
-  SYMBOL:
+  FN:
+  - {t: QWERTY, h: toggle}
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
   - {t: '$$mdi:transfer$$', type: trans}
-  - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - {t: '$$mdi:menu-up$$', s: '$$mdi:mouse$$'}
-  - ^
-  - '&'
-  - '*'
   - (
+  - KP 7
+  - KP 8
+  - KP 9
   - )
-  - {t: '$$mdi:backspace$$', type: backspace}
-  - {t: '$$mdi:transfer$$', type: trans}
-  - $$mdi:bluetooth-off$$
-  - $$mdi:mouse-left-click-outline$$
-  - $$mdi:mouse-scroll-wheel$$
-  - $$mdi:mouse-right-click-outline$$
-  - '&mkp MB4'
-  - {t: '$$mdi:menu-left$$', s: '$$mdi:mouse$$'}
-  - $$mdi:mouse-left-click-outline$$
-  - {t: '$$mdi:menu-right$$', s: '$$mdi:mouse$$'}
-  - {t: '-', s: _}
   - {t: '=', s: +}
-  - {t: '[', s: '{'}
-  - {t: ']', s: '}'}
-  - {t: \, s: '|'}
-  - {t: '`', s: '~'}
+  - PgUp
+  - F6
+  - F7
+  - F8
+  - F9
+  - F10
   - {t: '$$mdi:transfer$$', type: trans}
-  - OUT USB
-  - OUT BLE
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - {t: '$$mdi:minus-circle-outline$$', type: none}
-  - '&mkp MB5'
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:menu-down$$', s: '$$mdi:mouse$$'}
-  - _
+  - {t: '$$mdi:transfer$$', type: trans}
   - +
-  - '{'
-  - '}'
-  - '|'
-  - '~'
+  - KP 4
+  - KP 5
+  - KP 6
+  - {t: \, s: '|'}
+  - {t: ',', s: <}
+  - PgDn
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: F11, h: '$$mdi:apple-keyboard-shift$$'}
+  - F12
+  - {t: '$$mdi:transfer$$', type: trans}
+  - {t: '$$mdi:transfer$$', type: trans}
+  - '*'
+  - {t: KP 1, h: '$$mdi:apple-keyboard-shift$$'}
+  - {t: KP 2, h: '$$mdi:apple-keyboard-control$$'}
+  - {t: KP 3, h: '$$mdi:apple-keyboard-option$$'}
+  - {t: /, s: '?'}
+  - .
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:keyboard-space$$', type: held}
-  - {t: '$$mdi:keyboard-return$$', type: held alternate}
+  - {t: KP ENTER, type: held alternate}
   - {t: '$$mdi:transfer$$', type: trans}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - KP NUM
   Fn:
   - '&studio_unlock'
   - F1
