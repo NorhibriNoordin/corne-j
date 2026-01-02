@@ -36,6 +36,133 @@
             #binding-cells = <0>;
             bindings = <&kp LEFT_SHIFT>, <&kp CAPS>;
         };
+
+        esc_tilde: esc_tilde {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ESC_TILDE";
+            bindings = <&kp ESC>, <&kp TILDE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        slash_equal: slash_equal {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_EQUAL";
+            bindings = <&kp NON_US_BACKSLASH>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
+
+        t_f4: t_f4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "T_F4";
+            bindings = <&kp T>, <&none>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
+
+        mouse_tog: mouse_tog {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MOUSE_TOG";
+            #binding-cells = <0>;
+            bindings = <&kp SINGLE_QUOTE>, <&none>, <&tog 3>;
+        };
+
+        caps_num: caps_num {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CAPS_NUM";
+            bindings = <&mo>, <&caps_word>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        caps_tog: caps_tog {
+            compatible = "zmk,behavior-tap-dance";
+            label = "CAPS_TOG";
+            #binding-cells = <0>;
+            bindings = <&caps_num 1 0>, <&tog 2>;
+        };
+
+        kp_menu: kp_menu {
+            compatible = "zmk,behavior-tap-dance";
+            label = "KP_MENU";
+            #binding-cells = <0>;
+            bindings = <&mt LEFT_GUI C_MENU>, <&kp K_MENU>;
+        };
+
+        new_behavior: new_behavior {
+            compatible = "zmk,behavior-mod-morph";
+            label = "NEW_BEHAVIOR";
+            bindings = <&slash_equal>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        slash_alt: slash_alt {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_ALT";
+            bindings = <&slash_equal>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT|MOD_RALT)>;
+        };
+
+        escTilde_btm: escTilde_btm {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ESCTILDE_BTM";
+            bindings = <&kp>, <&esc_tilde>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        mouse_v: mouse_v {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_V";
+            bindings = <&kp LC(V)>, <&kp LS(V)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        mouse_c: mouse_c {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_C";
+            bindings = <&kp LC(C)>, <&kp C>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        mouse_x: mouse_x {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_X";
+            bindings = <&kp LC(X)>, <&kp LA(X)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        mouse_z: mouse_z {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MOUSE_Z";
+            bindings = <&kp LC(Z)>, <&kp Z>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_LSFT|MOD_LALT|MOD_LGUI|MOD_RCTL|MOD_RSFT|MOD_RALT|MOD_RGUI)>;
+        };
+
+        esc_mouose: esc_mouose {
+            compatible = "zmk,behavior-tap-dance";
+            label = "ESC_MOUOSE";
+            #binding-cells = <0>;
+            bindings = <&esc_tilde>, <&esc_tilde>, <&to 0>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -73,7 +200,7 @@
                          &kp LGUI  &mo 1  &lt 3 SPACE                                               &lt 3 ENTER  &mo 2  &kp RALT
             >;
 
-             sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         lower_layer {
