@@ -84,7 +84,7 @@
             compatible = "zmk,behavior-tap-dance";
             label = "CAPS_TOG";
             #binding-cells = <0>;
-            bindings = <&caps_num 1 0>, <&tog 2>;
+            bindings = <&caps_num 1 0>, <&kp CAPSLOCK>;
         };
 
         kp_menu: kp_menu {
@@ -186,6 +186,57 @@
             bindings = <&soft_off>;
             key-positions = <1 15 29>;
         };
+
+        undo {
+            bindings = <&kp LC(Z)>;
+            key-positions = <28 29>;
+            layers = <0 2 5>;
+        };
+
+        copy {
+            bindings = <&kp LC(C)>;
+            key-positions = <28 31>;
+        };
+
+        cut {
+            bindings = <&kp LC(X)>;
+            key-positions = <28 30>;
+        };
+
+        tab {
+            bindings = <&kp TAB>;
+            key-positions = <44 43>;
+        };
+
+        del_combo {
+            bindings = <&kp DEL>;
+            key-positions = <45 46>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <33 36>;
+        };
+
+        dash {
+            bindings = <&kp MINUS>;
+            key-positions = <18 22>;
+        };
+
+        default_layer {
+            bindings = <&to 0>;
+            key-positions = <44 43 45 46>;
+        };
+
+        plus {
+            bindings = <&kp PLUS>;
+            key-positions = <12 37>;
+        };
+
+        grave_combo {
+            bindings = <&kp GRAVE>;
+            key-positions = <43 42>;
+        };
     };
 
     keymap {
@@ -255,13 +306,14 @@
 
         numpad {
             bindings = <
-&trans  &trans     &trans     &trans     &trans  &trans                    &trans          &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans     &trans     &trans     &trans  &trans            &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &trans  &trans  &trans            &trans          &trans  &trans  &trans  &trans  &trans  &trans
-                              &trans     &trans  &trans                                    &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans     &trans                      &kp UP_ARROW               &kp LEFT_PARENTHESIS  &kp KP_NUMBER_7              &kp KP_NUMBER_8        &kp KP_NUMBER_9       &kp RIGHT_PARENTHESIS  &kp EQUAL
+&trans  &trans     &trans     &trans     &trans     &trans            &kp LEFT  &kp KP_NUMLOCK  &kp RIGHT  &kp MINUS             &kp KP_NUMBER_4              &kp KP_NUMBER_5        &kp KP_NUMBER_6       &kp KP_MULTIPLY        &kp PLUS
+&trans  &kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &trans  &trans              &kp DOWN                   &kp KP_NUMBER_0       &mt RIGHT_SHIFT KP_NUMBER_1  &mt RCTRL KP_NUMBER_2  &mt RALT KP_NUMBER_3  &kp SLASH              &kp MINUS
+                              &trans     &trans     &trans                                                 &trans                &trans                       &trans
             >;
 
             label = "NUMPAD";
+            sensor-bindings = <&inc_dec_kp LC(Z) LC(Y)>;
         };
     };
 };
