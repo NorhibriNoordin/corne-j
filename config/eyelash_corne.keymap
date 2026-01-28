@@ -163,6 +163,15 @@
             #binding-cells = <0>;
             bindings = <&esc_tilde>, <&esc_tilde>, <&to 0>;
         };
+
+        slash_plus: slash_plus {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SLASH_PLUS";
+            bindings = <&kp SLASH>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LGUI|MOD_RGUI)>;
+        };
     };
 
     rgb_encoder: rgb_encoder {
@@ -260,10 +269,10 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-&esc_tilde      &kp Q  &kp W           &kp E                 &kp R             &t_f4                                      &kp UP                      &kp Y        &kp U              &kp I            &kp O              &kp P     &slash_alt
-&kp TAB         &kp A  &kp S           &kp D                 &kp F             &kp G                            &kp LEFT  &rgb_ug RGB_TOG  &kp RIGHT  &kp H        &kp J              &kp K            &kp L              &kp SEMI  &kp SQT
-&kp UNDERSCORE  &kp Z  &mt LEFT_ALT X  &mt LCTRL C           &mt LEFT_SHIFT V  &kp B        &kp K_PLAY_PAUSE              &kp DOWN                    &kp N        &mt RIGHT_SHIFT M  &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &kp FSLH  &kp MINUS
-                                       &escTilde_btm LGUI 0  &caps_tog         &lt 2 SPACE                                                            &lt 2 ENTER  &kp BACKSPACE      &lt 4 DELETE
+&esc_tilde      &kp Q  &kp W           &kp E                 &kp R             &t_f4                                         &kp UP                      &kp Y            &kp U              &kp I            &kp O              &kp P     &slash_alt
+&kp TAB         &kp A  &kp S           &kp D                 &kp F             &kp G                               &kp LEFT  &rgb_ug RGB_TOG  &kp RIGHT  &kp H            &kp J              &kp K            &kp L              &kp SEMI  &kp SQT
+&kp UNDERSCORE  &kp Z  &mt LEFT_ALT X  &mt LCTRL C           &mt LEFT_SHIFT V  &mt LEFT_GUI B  &kp K_PLAY_PAUSE              &kp DOWN                    &mt RIGHT_GUI N  &mt RIGHT_SHIFT M  &mt RCTRL COMMA  &mt RIGHT_ALT DOT  &kp FSLH  &kp MINUS
+                                       &escTilde_btm LGUI 0  &caps_tog         &lt 2 SPACE                                                               &lt 2 ENTER      &kp BACKSPACE      &lt 4 DELETE
             >;
 
             sensor-bindings = <&scroll_encoder>;
