@@ -34,10 +34,10 @@ layers:
   - {t: X, h: '$$mdi:apple-keyboard-option$$'}
   - {t: C, h: '$$mdi:apple-keyboard-control$$'}
   - {t: V, h: '$$mdi:apple-keyboard-shift$$'}
-  - B
+  - {t: B, h: '$$mdi:apple-keyboard-command$$'}
   - PLAY PAUSE
   - $$mdi:arrow-down-bold$$
-  - N
+  - {t: N, h: RIGHT GUI}
   - {t: M, h: '$$mdi:apple-keyboard-shift$$'}
   - {t: ',', h: '$$mdi:apple-keyboard-control$$', s: <}
   - {t: ., h: '$$mdi:apple-keyboard-option$$', s: '>'}
