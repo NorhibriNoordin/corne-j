@@ -15,8 +15,8 @@
 &msc_input_listener { input-processors = <&zip_scroll_scaler 2 1>; };
 
 &msc {
-    acceleration-exponent = <1>;      // 0
-    time-to-max-speed-ms = <100>;       // 300
+    acceleration-exponent = <0>;      // 0
+    time-to-max-speed-ms = <0>;       // 300
     delay-ms = <0>;                   // 0
 };
 
@@ -30,6 +30,23 @@
 
 / {
     behaviors {
+        scroll_encoder_v2: scroll_encoder_v2 {
+            compatible = "zmk,behavior-sensor-rotate";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+            // No tap-ms for immediate, mouse-like feedback
+        };
+
+        hm: homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOMEROW_MODS";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            quick-tap-ms = <175>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+
         td0: td0 {
             compatible = "zmk,behavior-tap-dance";
             display-name = "Shift/Caps Lock Tap Dance";
@@ -275,7 +292,7 @@
                                        &escTilde_btm LGUI 0  &caps_tog         &lt 2 SPACE                                                               &lt 2 ENTER      &kp BACKSPACE      &lt 4 DELETE
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder_v2>;
         };
 
         lower_layer {
@@ -312,7 +329,7 @@
                                     &trans     &trans     &trans                                                               &trans  &trans  &trans
             >;
 
-            sensor-bindings = <&scroll_encoder>;
+            sensor-bindings = <&scroll_encoder_v2>;
             label = "MOUSE";
         };
 
@@ -341,3 +358,4 @@
         };
     };
 };
+
