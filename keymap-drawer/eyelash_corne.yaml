@@ -44,7 +44,7 @@ layers:
   - {t: /, s: '?'}
   - {t: '-', s: _}
   - {t: '$$mdi:keyboard-esc$$', h: LGUI, s: '~'}
-  - '&caps_tog'
+  - {t: '$$mdi:alpha-w-box$$', h: NUMBER}
   - {t: '$$mdi:keyboard-space$$', h: FN}
   - {t: '$$mdi:keyboard-return$$', h: FN}
   - {t: '$$mdi:backspace$$', type: backspace}
@@ -93,7 +93,7 @@ layers:
   - {t: '$$mdi:transfer$$', type: trans}
   - PG DN
   - {t: '`', s: '~'}
-  - {t: '$$mdi:transfer$$', type: trans}
+  - {type: held}
   - {t: '$$mdi:transfer$$', type: trans}
   - INS
   - {t: '$$mdi:transfer$$', type: trans}
